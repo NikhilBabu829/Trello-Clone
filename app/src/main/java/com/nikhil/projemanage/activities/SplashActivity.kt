@@ -8,6 +8,7 @@ import android.os.Handler
 import android.view.WindowManager
 import android.widget.TextView
 import com.nikhil.projemanage.R
+import com.nikhil.projemanage.firebase.FireStoreClass
 
 class SplashActivity : AppCompatActivity() {
     var tvAppName : TextView? = null
@@ -23,7 +24,12 @@ class SplashActivity : AppCompatActivity() {
         val typeFace : Typeface = Typeface.createFromAsset(assets,"RampartOne-Regular.ttf")
         tvAppName?.typeface = typeFace
         Handler().postDelayed({
-            startActivity(Intent(this, IntroActivity::class.java))
+            var currentUserID = FireStoreClass().getCurrentUserId()
+            if (currentUserID.isNotEmpty()){
+                startActivity(Intent(this,MainActivity::class.java))
+            }else{
+                startActivity(Intent(this, IntroActivity::class.java))
+            }
             finish()
         },2500)
     }
