@@ -14,10 +14,15 @@
         android:theme="@style/Theme.Projemanage"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".SignInActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".IntroActivity"
             android:exported="false"

@@ -2,6 +2,7 @@ package com.nikhil.projemanage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.widget.Toolbar
 
 class SignUpActivity : AppCompatActivity() {
@@ -11,6 +12,10 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
         setUpActionBar = findViewById(R.id.toolbar_sign_up_activity)
         setupActionBar()
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
     }
     private fun setupActionBar(){
         setSupportActionBar(setUpActionBar)
@@ -19,6 +24,7 @@ class SignUpActivity : AppCompatActivity() {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setHomeAsUpIndicator(R.drawable.icbaselinearrowbackios24)
         }
+        setUpActionBar?.setNavigationOnClickListener{onBackPressed()}
     }
 
 }
