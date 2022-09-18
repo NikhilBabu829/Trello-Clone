@@ -9,7 +9,8 @@ import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.nikhil.projemanage.R
-import kotlinx.android.synthetic.main.activity_sign_in.*
+import com.nikhil.projemanage.firebase.FireStoreClass
+import com.nikhil.projemanage.models.User
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : BaseActivity() {
@@ -23,6 +24,12 @@ class SignUpActivity : BaseActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+    }
+    fun userRegisteredSuccess(){
+        Toast.makeText(this,"you have successfully registered",Toast.LENGTH_SHORT).show()
+        hideProgressDialog()
+        FirebaseAuth.getInstance().signOut()
+        finish()
     }
     private fun setupActionBar(){
         setSupportActionBar(setUpActionBar)
@@ -47,17 +54,11 @@ class SignUpActivity : BaseActivity() {
         if(validateForm(name,email,password)){
             showProgressDialog(resources.getString(R.string.please_wait))
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password).addOnCompleteListener { task ->
-                hideProgressDialog()
                 if (task.isSuccessful) {
                     val firebaseUser: FirebaseUser = task.result!!.user!!
                     val registeredEmail = firebaseUser.email!!
-                    Toast.makeText(
-                        this,
-                        "$name you have succesfully registered the email address $registeredEmail",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    FirebaseAuth.getInstance().signOut()
-                    finish()
+                    val user = User(firebaseUser.uid,name,registeredEmail)
+                    FireStoreClass().registerUser(this,user)
                 } else {
                     Toast.makeText(this, "Registration Failed!", Toast.LENGTH_SHORT).show()
                 }
