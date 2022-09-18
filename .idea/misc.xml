@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bgforbtnone.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/shapeWithBorder.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/shapewithborder.xml" value="0.1505" />
+        <entry key="app/src/main/res/layout-v23/activity_intro.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.2391304347826087" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2246376811594203" />
       </map>
@@ -13,5 +18,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2391304347826087" />
+      </ProjectState>
+    </option>
   </component>
 </project>
