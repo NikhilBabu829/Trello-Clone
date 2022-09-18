@@ -10,4 +10,5 @@
     <color name="primaryTextColor">#FFFFC300</color>
     <color name="secondaryTextColor">#FFFF4400</color>
     <color name="territialTextColor">#FF1048FF</color>
+    <color name="snackbar_error_color">#F72400</color>
 </resources>

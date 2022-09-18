@@ -1,10 +1,10 @@
-package com.nikhil.projemanage
+package com.nikhil.projemanage.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import android.widget.Button
 import androidx.appcompat.widget.Toolbar
+import com.nikhil.projemanage.R
 
 class SignInActivity : AppCompatActivity() {
     var signInToolBar : Toolbar? =null

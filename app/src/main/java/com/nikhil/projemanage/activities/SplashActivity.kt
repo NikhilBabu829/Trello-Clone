@@ -1,13 +1,13 @@
-package com.nikhil.projemanage
+package com.nikhil.projemanage.activities
 
 import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.os.HandlerThread
 import android.view.WindowManager
 import android.widget.TextView
+import com.nikhil.projemanage.R
 
 class SplashActivity : AppCompatActivity() {
     var tvAppName : TextView? = null
@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
         val typeFace : Typeface = Typeface.createFromAsset(assets,"RampartOne-Regular.ttf")
         tvAppName?.typeface = typeFace
         Handler().postDelayed({
-            startActivity(Intent(this,IntroActivity::class.java))
+            startActivity(Intent(this, IntroActivity::class.java))
             finish()
         },2500)
     }
