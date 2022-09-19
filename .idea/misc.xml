@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/ iconsbag_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bgforbtnone.xml" value="0.166" />
         <entry key="app/src/main/res/drawable/iconsbag_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/nav_header_main_background.xml" value="0.1635" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/shapeWithBorder.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/shapewithborder.xml" value="0.1505" />
@@ -13,10 +14,15 @@
         <entry key="app/src/main/res/layout/activity_base.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.2391304347826087" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_my_profile.xml" value="0.2391304347826087" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.2418478260869565" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.21986205188940602" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2246376811594203" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/dialog_progress.xml" value="0.2391304347826087" />
+        <entry key="app/src/main/res/layout/main_content.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.5317460317460317" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2652318318684896" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/iconsbag.xml" value="0.1505" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/iconsbag_round.xml" value="0.1505" />
       </map>

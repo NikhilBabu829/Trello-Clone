@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.TextView
 import com.nikhil.projemanage.R
 import com.nikhil.projemanage.firebase.FireStoreClass
+import com.projemanag.activities.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     var tvAppName : TextView? = null
@@ -26,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             var currentUserID = FireStoreClass().getCurrentUserId()
             if (currentUserID.isNotEmpty()){
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             }else{
                 startActivity(Intent(this, IntroActivity::class.java))
             }
